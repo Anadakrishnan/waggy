@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shopping Cart - Waggy Pet Shop</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+  <!-- Navigation Bar -->
+  <nav class="navbar">
+  <!-- 1. Logo -->
+  <a href="index.html" class="logo">🐾 WAGGY DOGS</a>
+
+  <!-- 2. Nav Links (Hidden on mobile) -->
+  <ul class="nav-links" id="nav-links">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="shop.html">Shop</a></li>
+    <li><a href="about.html" class="active">About Us</a></li>
+    <li><a href="contact.html">Contact</a></li>
+  </ul>
+
+  <!-- 3. Navigation Controls Wrapper -->
+  <div class="nav-controls">
+    <!-- Icons (User & Cart) -->
+    <div class="nav-icons">
+      <a href="login.html" title="Account">👤</a>
+      <a href="cart.html" title="Cart">🛒 <span class="cart-badge" id="cart-count">0</span></a>
+    </div>
+
+    <!-- Menu Toggle Button (Rightmost position) -->
+    <button class="menu-toggle" id="mobile-menu-btn" aria-label="Toggle navigation">☰</button>
+  </div>
+</nav>
+
+  <!-- Header -->
+  <div style="text-align: center; padding: 2rem 1rem; background-color: #f9f8f3;">
+    <h1 style="font-size: 2rem; color: #2d3748;">Shopping Cart</h1>
+    <p style="color: #718096;">Home / Pages / Cart</p>
+  </div>
+
+  <!-- Cart Content Area -->
+  <div style="max-width: 1000px; margin: 2rem auto; padding: 0 1rem;">
+    <!-- Rendered Cart Items Container -->
+    <div id="cart-items"></div>
+
+    <!-- Total and Checkout Bar -->
+    <div style="display: flex; justify-content: space-between; align-items: center; margin-top: 2rem; padding-top: 1rem; border-top: 1px solid #e2e8f0;">
+      <h3 style="font-size: 1.5rem; color: #2d3748;">Total: $<span id="cart-total">0.00</span></h3>
+      <button style="background-color: #4a5568; color: white; padding: 0.75rem 1.5rem; border: none; border-radius: 6px; cursor: pointer; font-weight: bold;" onclick="alert('Proceeding to checkout!')">Checkout</button>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-content">
+      <div class="footer-col">
+        <h4>WAGGY DOGS</h4>
+        <p>Connecting verified dog lovers with healthy purebred canines.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="shop.html">Shop</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Customer Care</h4>
+        <ul>
+          <li><a href="login.html">My Account</a></li>
+          <li><a href="cart.html">View Cart</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Contact Us</h4>
+        <p>Email: adopt@waggypets.com</p>
+        <p>Phone: +1 234 567 890</p>
+      </div>
+    </div>
+    <div class="copyright">
+      &copy; 2026 Waggy Dog Shop. All rights reserved.
+    </div>
+  </footer>
+
+  <script src="js/cart.js"></script>
+  <script src="js/main.js"></script>
+</body>
+
+</html>
