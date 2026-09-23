@@ -4,37 +4,44 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>WAGGY - Find & Buy Purebred Dogs</title>
-  <link rel="stylesheet" href="css/style.css">
+  <title>Home - Waggy Dogs</title>
+
+<link rel="icon" type="image/svg+xml" href="images/favicon.svg?v=1">
+
+  <!-- CSS Stylesheets -->
+  <link rel="stylesheet" href="css/global.css">
+  <link rel="stylesheet" href="css/navbar.css">
+  <link rel="stylesheet" href="css/index.css">
+  <link rel="stylesheet" href="css/footer.css">
 </head>
 
 <body>
 
   <!-- Navigation Bar -->
   <nav class="navbar">
-  <!-- 1. Logo -->
-  <a href="index.html" class="logo">🐾 WAGGY DOGS</a>
+    <!-- 1. Logo -->
+    <a href="index.html" class="logo">🐾 WAGGY DOGS</a>
 
-  <!-- 2. Nav Links (Hidden on mobile) -->
-  <ul class="nav-links" id="nav-links">
-    <li><a href="index.html">Home</a></li>
-    <li><a href="shop.html">Shop</a></li>
-    <li><a href="about.html" class="active">About Us</a></li>
-    <li><a href="contact.html">Contact</a></li>
-  </ul>
+    <!-- 2. Nav Links (Hidden on mobile) -->
+    <ul class="nav-links" id="nav-links">
+      <li><a href="index.html" class="active">Home</a></li>
+      <li><a href="shop.html">Shop</a></li>
+      <li><a href="about.html">About Us</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
 
-  <!-- 3. Navigation Controls Wrapper -->
-  <div class="nav-controls">
-    <!-- Icons (User & Cart) -->
-    <div class="nav-icons">
-      <a href="login.html" title="Account">👤</a>
-      <a href="cart.html" title="Cart">🛒 <span class="cart-badge" id="cart-count">0</span></a>
+    <!-- 3. Navigation Controls Wrapper -->
+    <div class="nav-controls">
+      <!-- Icons (User & Cart) -->
+      <div class="nav-icons">
+        <a href="login.html" title="Account">👤</a>
+        <a href="cart.html" title="Cart">🛒 <span class="cart-badge" id="cart-count">0</span></a>
+      </div>
+
+      <!-- Menu Toggle Button (Rightmost position) -->
+      <button class="menu-toggle" id="mobile-menu-btn" aria-label="Toggle navigation">☰</button>
     </div>
-
-    <!-- Menu Toggle Button (Rightmost position) -->
-    <button class="menu-toggle" id="mobile-menu-btn" aria-label="Toggle navigation">☰</button>
-  </div>
-</nav>
+  </nav>
 
   <!-- Hero Section -->
   <section class="hero">
@@ -60,7 +67,9 @@
   <div class="special-banner">
     <div>
       <span class="offer-badge">Starter Package Included</span>
-      <h2>FREE PUPPY KIT</h2>
+      <br><br>
+      <!-- HTML -->
+      <h2 class="free">FREE PUPPY KIT</h2>
       <p>With every dog purchase this month (Includes collar, food, & leash)</p>
     </div>
     <a href="shop.html" class="btn-green">RESERVE NOW</a>

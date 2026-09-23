@@ -1,11 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Login - Waggy</title>
-  <link rel="stylesheet" href="css/style.css">
+
+  <link rel="icon" type="image/svg+xml" href="images/favicon.svg?v=1">
+
+
+  <link rel="stylesheet" href="css/global.css">
+  <link rel="stylesheet" href="css/navbar.css">
+  <link rel="stylesheet" href="css/login.css">
+  <link rel="stylesheet" href="css/footer.css">
 </head>
+
 <body>
 
   <!-- Navigation Bar -->
@@ -28,20 +37,55 @@
     </div>
   </nav>
 
-  <!-- Login Form Container -->
-  <div class="auth-container">
-    <h2 class="section-title">Login</h2>
-    <form class="auth-form">
-      <div class="form-group">
-        <input type="email" placeholder="Email Address" required>
+  <!-- Login Main Section Wrapper -->
+  <main class="login-wrapper">
+    <div class="login-card-container">
+      
+      <!-- Left Column: Pet Shop Hero Visual -->
+      <div class="login-visual-side">
+        <div class="visual-overlay">
+          <span class="welcome-badge">🐾 Welcome Back</span>
+          <h2>Your Dog’s Favorite Place</h2>
+          <p>Sign in to check orders, save favorite puppies, and access exclusive pet care offers.</p>
+        </div>
       </div>
-      <div class="form-group">
-        <input type="password" placeholder="Password" required>
+
+      <!-- Right Column: Login Form -->
+      <div class="login-form-side">
+        <div class="form-header">
+          <h1>Sign in</h1>
+          <p class="subtitle">Welcome to Waggy Pet Shop. Enter your details to access your account.</p>
+        </div>
+
+        <form class="auth-form">
+          <div class="form-group">
+            <label for="email">E-mail</label>
+            <input type="email" id="email" placeholder="name@example.com" required>
+          </div>
+
+          <div class="form-group">
+            <label for="password">Password</label>
+            <input type="password" id="password" placeholder="••••••••••••" required>
+          </div>
+
+          <div class="form-options">
+            <label class="remember-me">
+              <input type="checkbox" checked>
+              <span>Remember me</span>
+            </label>
+            <a href="#" class="forgot-pass">Forgot password?</a>
+          </div>
+
+          <button type="submit" class="btn-primary btn-full">Sign In</button>
+
+          <div class="form-footer">
+            <p>Don't have an account? <a href="#">Register here</a></p>
+          </div>
+        </form>
       </div>
-      <button type="submit" class="btn-green btn-full">Sign In</button>
-     
-    </form>
-  </div>
+
+    </div>
+  </main>
 
   <script>
     const menuBtn = document.getElementById('mobile-menu-btn');
@@ -54,4 +98,5 @@
     }
   </script>
 </body>
+
 </html>
