@@ -8,6 +8,9 @@
 
   <link rel="icon" type="image/svg+xml" href="images/favicon.svg?v=1">
 
+  <!-- AOS Library CSS from CDN -->
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
+
   <link rel="stylesheet" href="css/global.css">
   <link rel="stylesheet" href="css/navbar.css">
   <link rel="stylesheet" href="css/cart.css">
@@ -42,14 +45,14 @@
     </div>
   </nav>
 
-  <!-- Header -->
-  <div style="text-align: center; padding: 2rem 1rem; background-color: #f9f8f3;">
+  <!-- Header (Zooms in cleanly on page load) -->
+  <div style="text-align: center; padding: 2rem 1rem; background-color: #f9f8f3;" data-aos="zoom-in" data-aos-duration="600">
     <h1 style="font-size: 2rem; color: #2d3748;">Shopping Cart</h1>
     <p style="color: #718096;">Home / Pages / Cart</p>
   </div>
 
-  <!-- Cart Content Area -->
-  <div style="max-width: 1000px; margin: 2rem auto; padding: 0 1rem;">
+  <!-- Cart Content Area (Fades up smoothly into position) -->
+  <div style="max-width: 1000px; margin: 2rem auto; padding: 0 1rem;" data-aos="fade-up" data-aos-duration="800" data-aos-delay="200">
     <!-- Rendered Cart Items Container -->
     <div id="cart-items"></div>
 
@@ -66,11 +69,11 @@
   <!-- Footer -->
   <footer>
     <div class="footer-content">
-      <div class="footer-col">
+      <div class="footer-col" data-aos="fade-up" data-aos-delay="100">
         <h4>WAGGY DOGS</h4>
         <p>Connecting verified dog lovers with healthy purebred canines.</p>
       </div>
-      <div class="footer-col">
+      <div class="footer-col" data-aos="fade-up" data-aos-delay="200">
         <h4>Quick Links</h4>
         <ul>
           <li><a href="index.html">Home</a></li>
@@ -79,14 +82,14 @@
           <li><a href="contact.html">Contact</a></li>
         </ul>
       </div>
-      <div class="footer-col">
+      <div class="footer-col" data-aos="fade-up" data-aos-delay="300">
         <h4>Customer Care</h4>
         <ul>
           <li><a href="login.html">My Account</a></li>
           <li><a href="cart.html">View Cart</a></li>
         </ul>
       </div>
-      <div class="footer-col">
+      <div class="footer-col" data-aos="fade-up" data-aos-delay="400">
         <h4>Contact Us</h4>
         <p>Email: adopt@waggypets.com</p>
         <p>Phone: +1 234 567 890</p>
@@ -97,8 +100,19 @@
     </div>
   </footer>
 
+  <!-- App Business Logic Scripts -->
   <script src="js/cart.js"></script>
   <script src="js/main.js"></script>
+
+  <!-- AOS Library JS from CDN -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  
+  <!-- Initialize AOS -->
+  <script>
+    AOS.init({
+      once: true // Animations run only once when the page loads
+    });
+  </script>
 </body>
 
 </html>

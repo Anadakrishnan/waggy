@@ -8,6 +8,9 @@
 
   <link rel="icon" type="image/svg+xml" href="images/favicon.svg?v=1">
 
+  <!-- AOS Library CSS from CDN -->
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
+
   <link rel="stylesheet" href="css/global.css">
   <link rel="stylesheet" href="css/navbar.css">
   <link rel="stylesheet" href="css/index.css">
@@ -41,24 +44,24 @@
     </div>
   </nav>
 
-  <!-- Section Title -->
-  <h2 class="section-title" style="text-align: center; margin: 2rem 0;">All Available Dogs</h2>
+  <!-- Section Title (Zooms in cleanly on entry) -->
+  <h2 class="section-title" style="text-align: center; margin: 2rem 0;" data-aos="zoom-in" data-aos-duration="600">All Available Dogs</h2>
 
-  <!-- Target Container for All Dogs -->
-  <section class="dogs-container">
+  <!-- Target Container for All Dogs (Fades up smoothly) -->
+  <section class="dogs-container" data-aos="fade-up" data-aos-duration="800">
     <div class="grid-4" id="dog-cards-wrapper">
       <!-- Dog cards rendered dynamically via JS -->
     </div>
   </section>
 
-  <!-- Footer -->
+  <!-- Footer (Columns cascade/reveal with sequential delays) -->
   <footer>
     <div class="footer-content">
-      <div class="footer-col">
+      <div class="footer-col" data-aos="fade-up" data-aos-delay="100">
         <h4>WAGGY DOGS</h4>
         <p>Connecting verified dog lovers with healthy purebred canines.</p>
       </div>
-      <div class="footer-col">
+      <div class="footer-col" data-aos="fade-up" data-aos-delay="200">
         <h4>Quick Links</h4>
         <ul>
           <li><a href="index.html">Home</a></li>
@@ -67,14 +70,14 @@
           <li><a href="contact.html">Contact</a></li>
         </ul>
       </div>
-      <div class="footer-col">
+      <div class="footer-col" data-aos="fade-up" data-aos-delay="300">
         <h4>Customer Care</h4>
         <ul>
           <li><a href="login.html">My Account</a></li>
           <li><a href="cart.html">View Cart</a></li>
         </ul>
       </div>
-      <div class="footer-col">
+      <div class="footer-col" data-aos="fade-up" data-aos-delay="400">
         <h4>Contact Us</h4>
         <p>Email: adopt@waggypets.com</p>
         <p>Phone: +1 959 9995 999</p>
@@ -85,7 +88,18 @@
     </div>
   </footer>
 
+  <!-- Main JavaScript App Logic -->
   <script src="js/main.js"></script>
+
+  <!-- AOS Library JS from CDN -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  
+  <!-- Initialize AOS -->
+  <script>
+    AOS.init({
+      once: true // Animations play once during scrolling
+    });
+  </script>
 </body>
 
 </html>

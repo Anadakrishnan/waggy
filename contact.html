@@ -8,6 +8,9 @@
 
   <link rel="icon" type="image/svg+xml" href="images/favicon.svg?v=1">
 
+  <!-- AOS Library CSS from CDN -->
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
+
   <link rel="stylesheet" href="css/global.css">
   <link rel="stylesheet" href="css/navbar.css">
   <link rel="stylesheet" href="css/contact.css">
@@ -40,7 +43,7 @@
     <div class="contact-container">
       
       <!-- Left Column: Info & Details -->
-      <div class="contact-info-section">
+      <div class="contact-info-section" data-aos="fade-right" data-aos-duration="1000">
         <h1 class="main-heading">Contact Us</h1>
         <p class="sub-description">
           Email, call, or complete the form to learn how Waggy Dogs can help you find your perfect canine companion.
@@ -52,25 +55,25 @@
           <a href="#support-categories" class="contact-link link-underline">Customer Support</a>
         </div>
 
-        <!-- Lower Info Columns -->
+        <!-- Lower Info Columns (Staggered cascade entry) -->
         <div class="info-grid" id="support-categories">
-          <div class="info-card">
+          <div class="info-card" data-aos="fade-up" data-aos-delay="200" data-aos-duration="800">
             <h3>Customer Support</h3>
             <p>Our support team is available around the clock to address any concerns or queries you may have.</p>
           </div>
-          <div class="info-card">
+          <div class="info-card" data-aos="fade-up" data-aos-delay="300" data-aos-duration="800">
             <h3>Feedback and Suggestions</h3>
             <p>We value your feedback and are continuously working to improve Waggy. Your input is crucial to us.</p>
           </div>
-          <div class="info-card">
+          <div class="info-card" data-aos="fade-up" data-aos-delay="400" data-aos-duration="800">
             <h3>Media Inquiries</h3>
             <p>For media-related questions or press inquiries, please contact us at media@waggypets.com.</p>
           </div>
         </div>
       </div>
 
-      <!-- Right Column: Contact Form Card -->
-      <div class="contact-card">
+      <!-- Right Column: Contact Form Card (Enters from right) -->
+      <div class="contact-card" data-aos="fade-left" data-aos-duration="1000" data-aos-delay="200">
         <h2>Get in Touch</h2>
         <p class="card-subtitle">You can reach us anytime</p>
 
@@ -122,11 +125,11 @@
   <!-- Footer -->
   <footer>
     <div class="footer-content">
-      <div class="footer-col">
+      <div class="footer-col" data-aos="fade-up" data-aos-delay="100">
         <h4>WAGGY DOGS</h4>
         <p>Connecting verified dog lovers with healthy purebred canines.</p>
       </div>
-      <div class="footer-col">
+      <div class="footer-col" data-aos="fade-up" data-aos-delay="200">
         <h4>Quick Links</h4>
         <ul>
           <li><a href="index.html">Home</a></li>
@@ -135,14 +138,14 @@
           <li><a href="contact.html">Contact</a></li>
         </ul>
       </div>
-      <div class="footer-col">
+      <div class="footer-col" data-aos="fade-up" data-aos-delay="300">
         <h4>Customer Care</h4>
         <ul>
           <li><a href="login.html">My Account</a></li>
           <li><a href="cart.html">View Cart</a></li>
         </ul>
       </div>
-      <div class="footer-col">
+      <div class="footer-col" data-aos="fade-up" data-aos-delay="400">
         <h4>Contact Us</h4>
         <p>Email: adopt@waggypets.com</p>
         <p>Phone: +1 959 9995 999</p>
@@ -174,6 +177,16 @@
         charCount.textContent = `${length}/120`;
       });
     }
+  </script>
+
+  <!-- AOS Library JS from CDN -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  
+  <!-- Initialize AOS -->
+  <script>
+    AOS.init({
+      once: true
+    });
   </script>
 </body>
 </html>

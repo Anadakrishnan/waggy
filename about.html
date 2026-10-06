@@ -7,6 +7,9 @@
   <title>About Us - Waggy Pet Shop</title>
   <link rel="icon" type="image/svg+xml" href="images/favicon.svg?v=1">
 
+  <!-- AOS Library CSS from CDN -->
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
+
   <link rel="stylesheet" href="css/global.css">
   <link rel="stylesheet" href="css/navbar.css">
   <link rel="stylesheet" href="css/about.css">
@@ -40,15 +43,16 @@
     </div>
   </nav>
 
-  <!-- Page Header Banner -->
-  <header class="about-header">
+  <!-- Page Header Banner (Zooms in cleanly on entry) -->
+  <header class="about-header" data-aos="zoom-in" data-aos-duration="600">
     <h1>About Waggy</h1>
   </header>
 
   <!-- Main Story Section -->
   <section class="about-story">
 
-    <div class="story-content">
+    <!-- Left Side Content Container (Enters from left) -->
+    <div class="story-content" data-aos="fade-right" data-aos-duration="1000">
 
       <span class="offer-badge mission-badge">OUR MISSION</span>
 
@@ -69,8 +73,8 @@
         happiness and vitality.
       </p>
 
-      <!-- Quick Stats Grid -->
-      <div class="stats-grid">
+      <!-- Quick Stats Grid (Fades up synchronously under text) -->
+      <div class="stats-grid" data-aos="fade-up" data-aos-duration="800" data-aos-delay="200">
 
         <div class="stat-item">
           <h3>100%</h3>
@@ -91,8 +95,8 @@
 
     </div>
 
-    <!-- Feature Image -->
-    <div class="story-image">
+    <!-- Feature Image (Enters from right) -->
+    <div class="story-image" data-aos="fade-left" data-aos-duration="1000">
       <img
         src="images/australian-shepherd.webp"
         alt="Waggy Companion">
@@ -105,12 +109,12 @@
 
     <div class="why-waggy-container">
 
-      <h2 class="section-title">Why Choose Waggy?</h2>
+      <h2 class="section-title" data-aos="fade-up" data-aos-duration="600">Why Choose Waggy?</h2>
 
       <div class="features-grid">
 
-        <!-- Feature 1 -->
-        <div class="feature-card">
+        <!-- Feature 1 (Reveals first) -->
+        <div class="feature-card" data-aos="fade-up" data-aos-duration="800" data-aos-delay="100">
           <div class="feature-icon">🩺</div>
 
           <h3>Comprehensive Vet Checks</h3>
@@ -121,8 +125,8 @@
           </p>
         </div>
 
-        <!-- Feature 2 -->
-        <div class="feature-card">
+        <!-- Feature 2 (Reveals second) -->
+        <div class="feature-card" data-aos="fade-up" data-aos-duration="800" data-aos-delay="200">
           <div class="feature-icon">📜</div>
 
           <h3>Ethical &amp; Verified Lineage</h3>
@@ -133,8 +137,8 @@
           </p>
         </div>
 
-        <!-- Feature 3 -->
-        <div class="feature-card">
+        <!-- Feature 3 (Reveals third) -->
+        <div class="feature-card" data-aos="fade-up" data-aos-duration="800" data-aos-delay="300">
           <div class="feature-icon">🏡</div>
 
           <h3>Lifetime Transition Support</h3>
@@ -151,8 +155,8 @@
 
   </section>
 
-  <!-- CTA Banner -->
-  <section class="about-cta">
+  <!-- CTA Banner (Attracts attention with a zoom effect on scroll) -->
+  <section class="about-cta" data-aos="zoom-in" data-aos-duration="800">
 
     <div class="special-banner about-cta-content">
 
@@ -176,14 +180,14 @@
 
     <div class="footer-content">
 
-      <div class="footer-col">
+      <div class="footer-col" data-aos="fade-up" data-aos-delay="100">
         <h4>WAGGY DOGS</h4>
         <p>
           Connecting verified dog lovers with healthy purebred canines.
         </p>
       </div>
 
-      <div class="footer-col">
+      <div class="footer-col" data-aos="fade-up" data-aos-delay="200">
         <h4>Quick Links</h4>
 
         <ul>
@@ -194,7 +198,7 @@
         </ul>
       </div>
 
-      <div class="footer-col">
+      <div class="footer-col" data-aos="fade-up" data-aos-delay="300">
         <h4>Customer Care</h4>
 
         <ul>
@@ -204,7 +208,7 @@
         </ul>
       </div>
 
-      <div class="footer-col">
+      <div class="footer-col" data-aos="fade-up" data-aos-delay="400">
         <h4>Contact Us</h4>
 
         <p>Email: adopt@waggypets.com</p>
@@ -219,7 +223,18 @@
 
   </footer>
 
+  <!-- Application Logic Main Script -->
   <script src="js/main.js"></script>
+
+  <!-- AOS Library JS from CDN -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  
+  <!-- Initialize AOS -->
+  <script>
+    AOS.init({
+      once: true // Elements animate only once when scrolling down
+    });
+  </script>
 
 </body>
 </html>
